@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module("myModule", []);
+        app.controller("myController",function ($scope) {
+
+        })
+    </script>
+</head>
+<body ng-app ng-init="name='add'">
+<input ng-model="name">
+{{name}}
+</body>
+</html>
