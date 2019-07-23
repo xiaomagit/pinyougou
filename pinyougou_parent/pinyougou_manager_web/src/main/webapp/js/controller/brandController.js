@@ -58,7 +58,7 @@ app.controller('brandController', function ($scope, $controller, brandService) {
             brandService.del($scope.selectIds).success(function (response) {
                 if (response.success) {
                     $scope.reloadList();
-                    $scope.selectIds=[];
+                    $scope.selectIds = [];
                 } else {
                     alert(response.message);
                 }

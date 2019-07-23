@@ -5,6 +5,7 @@ import entity.PageResult;
 import entity.Result;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 品牌服务接口
@@ -63,4 +64,10 @@ public interface BrandService {
      * @return
      */
     PageResult findPage(TbBrand brand, int pageNum, int pageSize);
+
+    /**
+     * 查询品牌下拉框数据
+     * @return
+     */
+    public List<Map> selectOption();
 }

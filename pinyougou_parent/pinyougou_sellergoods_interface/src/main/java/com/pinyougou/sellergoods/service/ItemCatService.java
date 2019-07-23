@@ -3,6 +3,8 @@ import java.util.List;
 import com.pinyougou.pojo.TbItemCat;
 
 import entity.PageResult;
+import entity.Result;
+
 /**
  * 服务层接口
  * @author Administrator
@@ -48,7 +50,7 @@ public interface ItemCatService {
 	 * 批量删除
 	 * @param ids
 	 */
-	public void delete(Long[] ids);
+	public Result delete(Long[] ids);
 
 	/**
 	 * 分页
@@ -57,5 +59,12 @@ public interface ItemCatService {
 	 * @return
 	 */
 	public PageResult findPage(TbItemCat itemCat, int pageNum, int pageSize);
+
+	/**
+	 * 根据上级id查询列表
+	 * @param parentId
+	 * @return
+	 */
+	public List<TbItemCat> findByParentId(Long parentId);
 	
 }
